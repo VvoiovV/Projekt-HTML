@@ -9,12 +9,13 @@ body {
 
 
 header {
+
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
