@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/02/island-01.jpg);
+}
+
+#logo {
+    height: 50px;
+    transition: filter 0.5s;
+}
+
+#logo:hover {
+    filter: invert(68%) sepia(45%) saturate(685%) hue-rotate(127deg) brightness(84%) contrast(93%);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    float: right;
+    margin: auto;
+}
+
+.block1 {
+    
+    background-position: center;
+    background-size: cover;
+    max-width: 1370px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 260px;
+    margin-top: 10px;
+}
+
+.navmob {
+    display: none;
+}
+
+.navmob img {
+    height: 35px;
+    width: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #40d4cf;
+}
+
+header {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.body {
+    display: none;
+}
+
+.top {
+    align-items: center;
+    background-color: #3e3e3e;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: center;
+}
+
+.woods {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.grafde {
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.stats {
+    align-items: center;
+    background-color: #10c9c3;
+    display: flex;
+    height: 300px;
+    justify-content: space-around;
+}
+
+.statdiv {
+    align-items: center;
+    display: flex;
+}
+
+.statdiv div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.statdiv div h4 {
+    color: white;
+    font-weight: normal;
+    margin: 0;
+}
+
+.sign {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.grey1 {
+    background-color: #e1e1e1;
+    height: 100%;
+    width: 49%;
+}
+
+.white1 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 49%;
+}
+
+.aboutmetext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.aboutmepar {
+    color: #787878;
+    margin-bottom: 50px;
+}
+
+.divs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-image {
+    position: relative;
+    margin: 10px;
+    width: 330px;
+    height: 290px;
+    overflow: hidden;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+}
+
+.container-image .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.container-image:hover {
+    background-color: #33635c;
+}
+
+.container-image:hover img {
+    opacity: 0.5;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .navmob {
+        display: block;
+    }
+
+    .stats, .sign, .registernow, .divs, footer {
+        flex-direction: column;
+    }
+
+    .container-image {
+        width: 100%;
+    }
+}

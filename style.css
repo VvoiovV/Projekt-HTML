@@ -9,269 +9,211 @@
 }
 
 body {
-    background-color: #f6f6f6;
+    background-color: #c4c4c4;
     margin: 0;
     padding: 0;
 }
 
-.container{
-    background-image: url(https://wallpaperboat.com/wp-content/uploads/2020/02/island-01.jpg);
+/*  */
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* dwie kolumny o równej szerokości */
+    background-image: url(/pics/simple-blue-hexagon-line-on-white-background-medicine-and-science-concept-abstract-healthy-and-medical-background-template-brochure-design-technology-and-science-wallpaper-template-vector.jpg);
+    height: 800px;
 }
 
-#logo {
-    height: 50px;
-    transition: filter 0.5s;
+.logo{
+margin-left: 10%;
+margin-top: 5%;
 }
 
-#logo:hover {
-    filter: invert(68%) sepia(45%) saturate(685%) hue-rotate(127deg) brightness(84%) contrast(93%);
+.menu{
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 5%;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    width: 35%;
-    align-items: center;
-    align-content: center;
+.menu>a{
+    padding: 1.5%;
 }
 
-.block1 {
-    
-    background-position: center;
-    background-size: cover;
-    max-width: 1370px;
-    margin: auto;
+/*  */
+
+.aboutUs{
     text-align: center;
-    width: 100%;
-    height: 260px;
-    margin-top: 10px;
-}
-
-.navmob {
-    display: none;
-}
-
-.navmob img {
-    height: 35px;
-    width: 35px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-a {
-    color: black;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: #40d4cf;
-}
-
-header {
-    align-items: center;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    width: 100%;
-}
-
-
-
-
-
-
-
-.body {
-    display: none;
-}
-
-.top {
-    align-items: center;
-    background-color: #3e3e3e;
-    display: flex;
-    flex-direction: column;
-    height: 350px;
-    justify-content: center;
-}
-
-.woods {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.grafde {
-    color: white;
-    font-size: 18px;
-    font-weight: lighter;
-}
-
-.stats {
-    align-items: center;
-    background-color: #10c9c3;
-    display: flex;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
     height: 300px;
-    justify-content: space-around;
 }
 
-.statdiv {
-    align-items: center;
-    display: flex;
-}
+/* skill progress bars */
 
-.statdiv div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.statdiv div h4 {
-    color: white;
-    font-weight: normal;
-    margin: 0;
-}
-
-.sign {
-    display: flex;
+.skill{
     height: 500px;
-    justify-content: space-between;
+    background-image: url(/pics/cool-white-1920-x-1080-background.jpg);
+}
+
+.skill>h1{
+    margin-left: 5%;
+}
+
+.progress-container {
     width: 100%;
+    max-width: 600px;
+    margin-left: 5%;
+    margin-top: 3%;
 }
 
-.grey1 {
-    background-color: #e1e1e1;
-    height: 100%;
-    width: 49%;
+.progress-label {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.white1 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    width: 49%;
-}
-
-.aboutmetext {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.aboutmepar {
-    color: #787878;
-    margin-bottom: 50px;
-}
-
-.divs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.container-image {
-    position: relative;
-    margin: 10px;
-    width: 330px;
-    height: 290px;
+.progress-bar {
+    background-color: #c4c4c4;
+    border-radius: 10px;
     overflow: hidden;
-    background-color: #ddd;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    margin-bottom: 20px;
 }
 
-.container-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s;
+.progress {
+    background-color: #2196f3;
+    height: 5px;
+    border-radius: 10px;
 }
 
-.container-image .icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    transition: opacity 0.5s;
+/* skill progress bars */
+
+/* WORK */
+
+.work{
+    height: 200px;
+
+    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
+    justify-content: space-between; /* Rozmieszcza elementy równomiernie z odstępami między nimi */
+    align-items: center; /* Wyrównuje elementy pionowo na środku */
+    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dodaje cień wokół kontenera */
 }
 
-.container-image:hover {
-    background-color: #33635c;
+.iconbox{
+    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
+    align-items: center; /* Wyrównuje elementy pionowo na środku */
+    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
+    flex: 1; /* Ustawia, że wszystkie kontenery będą miały równą szerokość */
+    margin: 0 10px; /* Dodaje odstęp między kontenerami */
+    text-align: left; /* Ustawia wyrównanie tekstu do lewej */
 }
 
-.container-image:hover img {
-    opacity: 0.5;
+.iconbox img{
+    width: 40px; /* Ustawia szerokość ikony */
+    height: 40px; /* Ustawia wysokość ikony */
+    margin-right: 10px; /* Dodaje odstęp między ikoną a tekstem */
 }
 
-footer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+.iconbox .texticon { 
+    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
+    flex-direction: column; /* Ustawia kierunek elementów na pionowy */
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 5px;
+/* WORK */
+
+/* GALLERY */
+
+.gallery {
+    display: flex; /* Ustawia kontener galerii jako flexbox */
+    flex-wrap: wrap; /* Pozwala elementom zawijać się do nowego wiersza */
+    justify-content: center; /* Wyśrodkowuje elementy galerii w poziomie */
 }
 
-footer a:hover {
-    text-decoration: underline;
+.gallery-row {
+    display: flex; /* Ustawia wiersz galerii jako flexbox */
+    justify-content: center; /* Wyśrodkowuje elementy w wierszu */
+    width: 100%; /* Szerokość wiersza równa 100% */
+    margin-bottom: 20px; /* Dolny margines między wierszami */
 }
 
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-    }
+.gallery-item {
+    position: relative; /* Ustawia pozycję względną względem galerii */
+    flex: 1 1 25%; /* Elastyczny udział w szerokości, 25% na 4 kolumny */
+    box-sizing: border-box; /* Uwzględnia obramowanie i padding w szerokości */
+    margin: 0 10px; /* Odstęp między elementami */
+    overflow: hidden; /* Ukrywa zawartość, która wychodzi poza kontener */
+}
 
-    .navmob {
-        display: block;
-    }
+.gallery-item img {
+    width: 100%; /* Pełna szerokość w kontenerze */
+    height: auto; /* Automatyczna wysokość zachowująca proporcje */
+    display: block; /* Ustawia zdjęcie jako blok */
+    transition: filter 0.3s ease; /* Płynne przejście efektu filtru */
+}
 
-    .stats, .sign, .registernow, .divs, footer {
-        flex-direction: column;
-    }
+.gallery-item:hover img {
+    filter: brightness(50%); /* Przyciemnia zdjęcie przy najechaniu */
+}
 
-    .container-image {
-        width: 100%;
-    }
+.overlay {
+    position: absolute; /* Ustawia położenie absolutne dla nakładki */
+    top: 0; /* Odległość od góry */
+    left: 0; /* Odległość od lewej */
+    width: 100%; /* Szerokość 100% */
+    height: 100%; /* Wysokość 100% */
+    display: flex; /* Ustawia nakładkę jako flexbox */
+    justify-content: center; /* Wyśrodkowuje zawartość w poziomie */
+    align-items: center; /* Wyśrodkowuje zawartość w pionie */
+    background-color: rgba(0, 0, 0, 0.5); /* Przezroczysty czarny kolor tła */
+    opacity: 0; /* Ukrywa nakładkę początkowo */
+    transition: opacity 0.3s ease; /* Płynne przejście opacity */
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1; /* Pokazuje nakładkę po najechaniu na zdjęcie */
+}
+
+.icon {
+    width: 10px; /* Szerokość ikony */
+    height: 10px; /* Wysokość ikony */
+    display: block; /* Ustawia ikonę jako blok */
+    transition: opacity 0.3s ease; /* Płynne przejście opacity */
+    opacity: 0; /* Ukrywa ikonę początkowo */
+}
+
+.gallery-item:hover .icon {
+    opacity: 1; /* Pokazuje ikonę po najechaniu na zdjęcie */
+}
+
+/* GALLERY */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    /* grid-template-columns: repeat(3, 1fr); */
+    height: 200px;
+    background-color:rgb(112, 112, 112);
 }
