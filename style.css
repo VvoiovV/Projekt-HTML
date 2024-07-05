@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #c4c4c4;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -90,7 +90,6 @@ margin-top: 5%;
 
 .work{
     height: 200px;
-
     display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
     justify-content: space-between; /* Rozmieszcza elementy równomiernie z odstępami między nimi */
     align-items: center; /* Wyrównuje elementy pionowo na środku */
@@ -98,7 +97,7 @@ margin-top: 5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dodaje cień wokół kontenera */
 }
 
-.iconbox{
+.workbox{
     display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
     align-items: center; /* Wyrównuje elementy pionowo na środku */
     padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
@@ -107,13 +106,13 @@ margin-top: 5%;
     text-align: left; /* Ustawia wyrównanie tekstu do lewej */
 }
 
-.iconbox img{
+.workbox img{
     width: 40px; /* Ustawia szerokość ikony */
     height: 40px; /* Ustawia wysokość ikony */
     margin-right: 10px; /* Dodaje odstęp między ikoną a tekstem */
 }
 
-.iconbox .texticon { 
+.workbox .texticon { 
     display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
     flex-direction: column; /* Ustawia kierunek elementów na pionowy */
 }
@@ -125,22 +124,14 @@ margin-top: 5%;
 .gallery {
     display: flex; /* Ustawia kontener galerii jako flexbox */
     flex-wrap: wrap; /* Pozwala elementom zawijać się do nowego wiersza */
-    justify-content: center; /* Wyśrodkowuje elementy galerii w poziomie */
 }
 
 .gallery-row {
     display: flex; /* Ustawia wiersz galerii jako flexbox */
-    justify-content: center; /* Wyśrodkowuje elementy w wierszu */
-    width: 100%; /* Szerokość wiersza równa 100% */
-    margin-bottom: 20px; /* Dolny margines między wierszami */
 }
 
 .gallery-item {
     position: relative; /* Ustawia pozycję względną względem galerii */
-    flex: 1 1 25%; /* Elastyczny udział w szerokości, 25% na 4 kolumny */
-    box-sizing: border-box; /* Uwzględnia obramowanie i padding w szerokości */
-    margin: 0 10px; /* Odstęp między elementami */
-    overflow: hidden; /* Ukrywa zawartość, która wychodzi poza kontener */
 }
 
 .gallery-item img {
@@ -154,66 +145,176 @@ margin-top: 5%;
     filter: brightness(50%); /* Przyciemnia zdjęcie przy najechaniu */
 }
 
-.overlay {
-    position: absolute; /* Ustawia położenie absolutne dla nakładki */
-    top: 0; /* Odległość od góry */
-    left: 0; /* Odległość od lewej */
-    width: 100%; /* Szerokość 100% */
-    height: 100%; /* Wysokość 100% */
-    display: flex; /* Ustawia nakładkę jako flexbox */
-    justify-content: center; /* Wyśrodkowuje zawartość w poziomie */
-    align-items: center; /* Wyśrodkowuje zawartość w pionie */
-    background-color: rgba(0, 0, 0, 0.5); /* Przezroczysty czarny kolor tła */
-    opacity: 0; /* Ukrywa nakładkę początkowo */
-    transition: opacity 0.3s ease; /* Płynne przejście opacity */
-}
 
 .gallery-item:hover .overlay {
     opacity: 1; /* Pokazuje nakładkę po najechaniu na zdjęcie */
 }
 
-.icon {
-    width: 10px; /* Szerokość ikony */
-    height: 10px; /* Wysokość ikony */
-    display: block; /* Ustawia ikonę jako blok */
+.overlay {
+    position: absolute; /* Ustawia położenie absolutne dla nakładki */
+    top:40%; /* Odległość od góry */
+    left: 40%; /* Odległość od lewej */
+    width: 20%; /* Szerokość 100% */
+    height: 20%; /* Wysokość 100% */
+    display: flex; /* Ustawia nakładkę jako flexbox */
+    justify-content: center; /* Wyśrodkowuje zawartość w poziomie */
+    opacity: 0; /* Ukrywa nakładkę początkowo */
     transition: opacity 0.3s ease; /* Płynne przejście opacity */
-    opacity: 0; /* Ukrywa ikonę początkowo */
-}
-
-.gallery-item:hover .icon {
-    opacity: 1; /* Pokazuje ikonę po najechaniu na zdjęcie */
 }
 
 /* GALLERY */
 
+/* PROCESS */
+
+.process{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+    height: 600px;
+}
+
+.video-container {
+    width: 100%; /* Możesz ustawić szerokość kontenera */
+    max-width: 800px; /* Opcjonalnie, ustaw maksymalną szerokość */
+    margin: 0 auto; /* Wyśrodkuj kontener */
+    padding: 20px; /* Dodaj padding, jeśli chcesz */
+    box-sizing: border-box; /* Uwzględnij padding i border w szerokości */
+}
+
+.video-container video {
+    width: 100%; /* Wideo wypełnia cały kontener */
+    height: auto; /* Zachowuje proporcje */
+    display: block; /* Ustawia wideo jako blok */
+}
+
+/* PROCESS */
 
 
+/* ICONS */
+
+.icons {
+    background-color: #cccccc;
+    height: 600px;
+    display:grid; /* Ustawia kontener galerii jako flexbox */
+    flex-wrap: wrap; /* Pozwala elementom zawijać się do nowego wiersza */
+    
+}
+
+.icons-row {
+    margin-top: 4%;
+    display: flex; /* Ustawia wiersz galerii jako flexbox */
+}
+
+.iconsbox{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%; /* Pełna szerokość w kontenerze */
+    height: auto; /* Automatyczna wysokość zachowująca proporcje */
+    display: block; /* Ustawia zdjęcie jako blok */
+    text-align: center;
+}
+
+.iconsbox img{
+    width: 50px; /* Ustawia szerokość ikony */
+    height: 50px; /* Ustawia wysokość ikony */
+}
+
+.iconsbox h3{
+    margin-top: 20px; /* Dodaje odstęp między ikoną a tekstem */
+}
+
+/* ICONS */
 
 
+/* QUOTE */
 
+.quote {
+    height: 600px;
+    position: relative; /* Relatywna pozycja, aby inne elementy mogły być absolutnie pozycjonowane w jej wnętrzu */
+    width: 100%; /* Szerokość 100% rodzica */
+    margin: auto; /* Wycentrowanie kontenera */
+    overflow: hidden; /* Ukrycie elementów wychodzących poza kontener */
+    background-color: #05e0bc; /* Kolor tła */
+    padding: 20px; /* Wewnętrzne odstępy */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Cień dla estetyki */
+}
 
+.mySlides {
+    display: none; /* Początkowo ukryj slajdy */
+    text-align: center; /* Wycentrowanie tekstu */
+    padding: 20px; /* Wewnętrzne odstępy */
+}
 
+.mySlides h1 {
+    margin-bottom: 10px; /* Dolny margines dla nagłówka */
+    margin-top: 10%;
+}
 
+/* Fade animation */
+.fade {
+    animation: fadeEffect 1s; /* Dodanie animacji fade */
+}
 
+@keyframes fadeEffect {
+    from {opacity: .4} /* Początkowa przezroczystość */
+    to {opacity: 1} /* Końcowa przezroczystość */
+}
 
+.dots-container {
+    text-align: center; /* Wycentrowanie kontenera z kropkami */
+    position: absolute; /* Absolutne pozycjonowanie względem kontenera */
+    bottom: 15px; /* Odstęp od dołu kontenera */
+    width: 100%; /* Szerokość 100% kontenera */
+}
 
+.dot {
+    height: 15px; /* Wysokość kropki */
+    width: 15px; /* Szerokość kropki */
+    margin: 0 5px; /* Margines między kropkami */
+    background-color: #bbb; /* Kolor tła kropki */
+    border-radius: 50%; /* Zaokrąglenie kropki */
+    display: inline-block; /* Wyświetlanie inline-block */
+    transition: background-color 0.6s ease; /* Płynne przejście koloru tła */
+}
 
+.active {
+    background-color: #717171; /* Kolor tła aktywnej kropki */
+}
 
+/* QUOTE */
 
+/* COLLAB */
 
+.collab{
+    height: 200px;
+    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
+    justify-content: space-between; /* Rozmieszcza elementy równomiernie z odstępami między nimi */
+    align-items: center; /* Wyrównuje elementy pionowo na środku */
+    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dodaje cień wokół kontenera */
+}
 
+.collabbox{
+    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
+    align-items: center; /* Wyrównuje elementy pionowo na środku */
+    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
+    flex: 1; /* Ustawia, że wszystkie kontenery będą miały równą szerokość */
+    margin: 0 10px; /* Dodaje odstęp między kontenerami */
+}
 
+.collabbox img{
+    width: 10%; /* Ustawia szerokość ikony */
+    height: 10%; /* Ustawia wysokość ikony */
+}
 
-
-
-
-
+/* COLLAB */
 
 
 
 
 footer{
-    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
     height: 200px;
     background-color:rgb(112, 112, 112);
 }
