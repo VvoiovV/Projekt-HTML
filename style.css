@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -18,15 +17,20 @@ body {
 
 .header{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* dwie kolumny o równej szerokości */
-    background-image: url(/pics/simple-blue-hexagon-line-on-white-background-medicine-and-science-concept-abstract-healthy-and-medical-background-template-brochure-design-technology-and-science-wallpaper-template-vector.jpg);
-    height: 800px;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url('pics/392.jpg');
+    height: 1200px;
 }
 
 .logo{
 margin-left: 10%;
 margin-top: 5%;
 }
+
+.logo img:hover {
+    filter: invert(68%) sepia(45%) saturate(685%) hue-rotate(127deg) brightness(84%) contrast(93%);
+    transition: 0.1s;
+  }
 
 .menu{
     text-align: right;
@@ -36,6 +40,17 @@ margin-top: 5%;
 
 .menu>a{
     padding: 1.5%;
+    font-family: inherit;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #00dbc9;
+}
+
+.designer{
+    margin-bottom: 15%;
 }
 
 /*  */
@@ -45,17 +60,23 @@ margin-top: 5%;
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 5%;
-    height: 300px;
+    height: 400px;
+}
+
+.aboutUs img{
+    width: 50%;
 }
 
 /* skill progress bars */
 
 .skill{
-    height: 500px;
-    background-image: url(/pics/cool-white-1920-x-1080-background.jpg);
+    height: 600px;
+    background-image: url(/pics/torii_black_and_white-wallpaper-1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
-.skill>h1{
+.skill h1{
     margin-left: 5%;
 }
 
@@ -79,7 +100,7 @@ margin-top: 5%;
 }
 
 .progress {
-    background-color: #2196f3;
+    background-color: #00dbc9;
     height: 5px;
     border-radius: 10px;
 }
@@ -89,32 +110,34 @@ margin-top: 5%;
 /* WORK */
 
 .work{
+    background-color: #00dbc9;
     height: 200px;
-    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
-    justify-content: space-between; /* Rozmieszcza elementy równomiernie z odstępami między nimi */
-    align-items: center; /* Wyrównuje elementy pionowo na środku */
-    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dodaje cień wokół kontenera */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 .workbox{
-    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
-    align-items: center; /* Wyrównuje elementy pionowo na środku */
-    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
-    flex: 1; /* Ustawia, że wszystkie kontenery będą miały równą szerokość */
-    margin: 0 10px; /* Dodaje odstęp między kontenerami */
-    text-align: left; /* Ustawia wyrównanie tekstu do lewej */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
 }
 
 .workbox img{
-    width: 40px; /* Ustawia szerokość ikony */
-    height: 40px; /* Ustawia wysokość ikony */
-    margin-right: 10px; /* Dodaje odstęp między ikoną a tekstem */
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .workbox .texticon { 
-    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
-    flex-direction: column; /* Ustawia kierunek elementów na pionowy */
+    display: flex;
+    flex-direction: column;
 }
 
 /* WORK */
@@ -122,44 +145,50 @@ margin-top: 5%;
 /* GALLERY */
 
 .gallery {
-    display: flex; /* Ustawia kontener galerii jako flexbox */
-    flex-wrap: wrap; /* Pozwala elementom zawijać się do nowego wiersza */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .gallery-row {
-    display: flex; /* Ustawia wiersz galerii jako flexbox */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .gallery-item {
-    position: relative; /* Ustawia pozycję względną względem galerii */
+    position: relative;
+    flex: 1 1 calc(25% - 20px);
+    overflow: hidden;
+    height: 400px;
 }
 
 .gallery-item img {
-    width: 100%; /* Pełna szerokość w kontenerze */
-    height: auto; /* Automatyczna wysokość zachowująca proporcje */
-    display: block; /* Ustawia zdjęcie jako blok */
-    transition: filter 0.3s ease; /* Płynne przejście efektu filtru */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: filter 0.3s ease;
 }
 
 .gallery-item:hover img {
-    filter: brightness(50%); /* Przyciemnia zdjęcie przy najechaniu */
-}
-
-
-.gallery-item:hover .overlay {
-    opacity: 1; /* Pokazuje nakładkę po najechaniu na zdjęcie */
+    filter: brightness(50%);
 }
 
 .overlay {
-    position: absolute; /* Ustawia położenie absolutne dla nakładki */
-    top:40%; /* Odległość od góry */
-    left: 40%; /* Odległość od lewej */
-    width: 20%; /* Szerokość 100% */
-    height: 20%; /* Wysokość 100% */
-    display: flex; /* Ustawia nakładkę jako flexbox */
-    justify-content: center; /* Wyśrodkowuje zawartość w poziomie */
-    opacity: 0; /* Ukrywa nakładkę początkowo */
-    transition: opacity 0.3s ease; /* Płynne przejście opacity */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
 }
 
 /* GALLERY */
@@ -171,21 +200,20 @@ margin-top: 5%;
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 5%;
-    height: 600px;
+    height: 700px;
 }
 
 .video-container {
-    width: 100%; /* Możesz ustawić szerokość kontenera */
-    max-width: 800px; /* Opcjonalnie, ustaw maksymalną szerokość */
-    margin: 0 auto; /* Wyśrodkuj kontener */
-    padding: 20px; /* Dodaj padding, jeśli chcesz */
-    box-sizing: border-box; /* Uwzględnij padding i border w szerokości */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .video-container video {
-    width: 100%; /* Wideo wypełnia cały kontener */
-    height: auto; /* Zachowuje proporcje */
-    display: block; /* Ustawia wideo jako blok */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* PROCESS */
@@ -196,33 +224,39 @@ margin-top: 5%;
 .icons {
     background-color: #cccccc;
     height: 600px;
-    display:grid; /* Ustawia kontener galerii jako flexbox */
-    flex-wrap: wrap; /* Pozwala elementom zawijać się do nowego wiersza */
+    display:grid;
+    flex-wrap: wrap;
     
 }
 
 .icons-row {
     margin-top: 4%;
-    display: flex; /* Ustawia wiersz galerii jako flexbox */
+    display: flex;
 }
 
 .iconsbox{
     margin-left: 5%;
     margin-right: 5%;
-    width: 100%; /* Pełna szerokość w kontenerze */
-    height: auto; /* Automatyczna wysokość zachowująca proporcje */
-    display: block; /* Ustawia zdjęcie jako blok */
+    width: 100%;
+    height: auto;
+    display: block;
     text-align: center;
 }
 
 .iconsbox img{
-    width: 50px; /* Ustawia szerokość ikony */
-    height: 50px; /* Ustawia wysokość ikony */
+    width: 50px;
+    height: 50px;
 }
 
+.iconsbox:hover {
+    filter: invert(68%) sepia(45%) saturate(685%) hue-rotate(127deg) brightness(84%) contrast(93%);
+    transition: 0.1s;
+  }
+
 .iconsbox h3{
-    margin-top: 20px; /* Dodaje odstęp między ikoną a tekstem */
+    margin-top: 20px;
 }
+
 
 /* ICONS */
 
@@ -231,55 +265,55 @@ margin-top: 5%;
 
 .quote {
     height: 600px;
-    position: relative; /* Relatywna pozycja, aby inne elementy mogły być absolutnie pozycjonowane w jej wnętrzu */
-    width: 100%; /* Szerokość 100% rodzica */
-    margin: auto; /* Wycentrowanie kontenera */
-    overflow: hidden; /* Ukrycie elementów wychodzących poza kontener */
-    background-color: #05e0bc; /* Kolor tła */
-    padding: 20px; /* Wewnętrzne odstępy */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Cień dla estetyki */
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #00dbc9;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mySlides {
-    display: none; /* Początkowo ukryj slajdy */
-    text-align: center; /* Wycentrowanie tekstu */
-    padding: 20px; /* Wewnętrzne odstępy */
+    display: none;
+    text-align: center;
+    padding: 20px;
 }
 
 .mySlides h1 {
-    margin-bottom: 10px; /* Dolny margines dla nagłówka */
+    margin-bottom: 10px;
     margin-top: 10%;
 }
 
 /* Fade animation */
 .fade {
-    animation: fadeEffect 1s; /* Dodanie animacji fade */
+    animation: fadeEffect 1s;
 }
 
 @keyframes fadeEffect {
-    from {opacity: .4} /* Początkowa przezroczystość */
-    to {opacity: 1} /* Końcowa przezroczystość */
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 .dots-container {
-    text-align: center; /* Wycentrowanie kontenera z kropkami */
-    position: absolute; /* Absolutne pozycjonowanie względem kontenera */
-    bottom: 15px; /* Odstęp od dołu kontenera */
-    width: 100%; /* Szerokość 100% kontenera */
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
 }
 
 .dot {
-    height: 15px; /* Wysokość kropki */
-    width: 15px; /* Szerokość kropki */
-    margin: 0 5px; /* Margines między kropkami */
-    background-color: #bbb; /* Kolor tła kropki */
-    border-radius: 50%; /* Zaokrąglenie kropki */
-    display: inline-block; /* Wyświetlanie inline-block */
-    transition: background-color 0.6s ease; /* Płynne przejście koloru tła */
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active {
-    background-color: #717171; /* Kolor tła aktywnej kropki */
+    background-color: #717171;
 }
 
 /* QUOTE */
@@ -287,34 +321,128 @@ margin-top: 5%;
 /* COLLAB */
 
 .collab{
-    height: 200px;
-    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
-    justify-content: space-between; /* Rozmieszcza elementy równomiernie z odstępami między nimi */
-    align-items: center; /* Wyrównuje elementy pionowo na środku */
-    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Dodaje cień wokół kontenera */
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 .collabbox{
-    display: flex; /* Ustawia elastyczne rozmieszczenie elementów w kontenerze */
-    align-items: center; /* Wyrównuje elementy pionowo na środku */
-    padding: 20px; /* Dodaje wewnętrzny margines wokół kontenera */
-    flex: 1; /* Ustawia, że wszystkie kontenery będą miały równą szerokość */
-    margin: 0 10px; /* Dodaje odstęp między kontenerami */
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
 }
 
 .collabbox img{
-    width: 10%; /* Ustawia szerokość ikony */
-    height: 10%; /* Ustawia wysokość ikony */
+    width: 10%;
+    height: 10%;
 }
+
+.collabbox img:hover {
+    filter: invert(68%) sepia(45%) saturate(685%) hue-rotate(127deg) brightness(84%) contrast(93%);
+    transition: 0.1s;
+  }
 
 /* COLLAB */
 
+/* NEED A PROJECT */
+
+.needaproject{
+    background-color: #b9b9b9;
+}
+
+.contact-form {
+    
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form h1 {
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: calc(50% - 5px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.input-title {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-message {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #00dbc9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #00998c;
+}
 
 
+/* NEED A PROJECT */
 
 footer{
-    grid-template-columns: repeat(3, 1fr);
+    padding: 3%;
     height: 200px;
-    background-color:rgb(112, 112, 112);
+    background-color:rgb(22, 22, 22);
+    color: white;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer div a {
+    display: block;
+    margin-bottom: 5px;
+    font-family: inherit;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #00dbc9;
 }

@@ -24,3 +24,24 @@ function showSlides() {
 
     setTimeout(showSlides, 1000); // Zmiana slajdu co 3 sekundy
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+    
+    menuLinks.forEach(function(menuLink) {
+        menuLink.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1); // Pobiera id sekcji bez '#'
+            const targetSection = document.getElementById(targetId); // Pobiera element sekcji
+
+            if (targetSection) {
+                // Scrolluj stronę do sekcji
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: "smooth" // Płynne przewijanie
+                });
+            }
+        });
+    });
+});
